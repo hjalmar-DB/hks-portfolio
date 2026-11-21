@@ -1,4 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-  <rect width="32" height="32" fill="#f5f5f3"/>
-  <text x="16" y="20" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#141414">HKS</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="wobo">
+  <rect width="32" height="32" fill="#364451"/>
+  <path d="M6.2 16.6c0-3.2 4-5.4 9.8-5.4s9.8 2 9.8 4.8c0 3.6-4.4 6.2-9.8 6.2s-9.8-2.4-9.8-5.6z" fill="#A5E008"/>
+  <circle cx="12.2" cy="16.2" r="2.35" fill="#D4F25C"/>
+  <circle cx="12.2" cy="16.2" r="1.05" fill="#364451"/>
+  <circle cx="19.8" cy="16.2" r="2.35" fill="#D4F25C"/>
+  <circle cx="19.8" cy="16.2" r="1.05" fill="#364451"/>
+  <path d="M12.6 19.4q3.4 1.7 6.8-.2" fill="none" stroke="#364451" stroke-width="0.9" stroke-linecap="round"/>
 </svg>

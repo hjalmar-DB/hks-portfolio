@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="wobo">
+  <circle cx="32" cy="36" r="24" fill="#3B4D5B"/>
+  <path d="M30 16c5-1 5-4.5 0-5.2c-5-.8-5-4.4 0-5.2" fill="none" stroke="#A5E008" stroke-width="2.2" stroke-linecap="round"/>
+  <circle cx="27.5" cy="6.5" r="3.1" fill="#3B4D5B"/>
+  <path d="M16 36c0-7.2 6.6-12 16-12s16 4.2 16 11c0 8.4-7.2 14.2-16 14.2S16 44 16 36z" fill="#A5E008"/>
+  <circle cx="26" cy="35.5" r="4.6" fill="#D4F25C"/>
+  <circle cx="26" cy="35.5" r="2.1" fill="#3B4D5B"/>
+  <circle cx="38.5" cy="35.5" r="4.6" fill="#D4F25C"/>
+  <circle cx="38.5" cy="35.5" r="2.1" fill="#3B4D5B"/>
+  <path d="M26.5 43.2q5.5 3.4 11.2-.2" fill="none" stroke="#3B4D5B" stroke-width="1.5" stroke-linecap="round"/>
+</svg>

@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 320" role="img" aria-label="wobo">
+  <style>
+    .eye { transform-box: fill-box; transform-origin: center; animation: blink 7.4s ease-in-out infinite; }
+    .antenna { transform-box: view-box; transform-origin: 132px 118px; animation: sway 6.4s ease-in-out infinite; }
+    .arm { transform-box: view-box; transform-origin: 86px 168px; animation: wave 8.8s ease-in-out infinite; }
+    @keyframes blink {
+      0%, 82%, 100% { transform: scaleY(1); }
+      86%, 89% { transform: scaleY(0.14); }
+    }
+    @keyframes sway {
+      0%, 100% { transform: rotate(0deg); }
+      50% { transform: rotate(4deg); }
+    }
+    @keyframes wave {
+      0%, 74%, 100% { transform: rotate(0deg); }
+      82% { transform: rotate(-12deg); }
+      90% { transform: rotate(6deg); }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .eye, .antenna, .arm { animation: none; }
+    }
+  </style>
+  <g fill="none" stroke="#3B4D5B" stroke-linecap="round">
+    <path d="M120 216 C98 250 76 258 58 248" stroke-width="26"/>
+    <path d="M166 220 C190 256 208 280 198 304" stroke-width="26"/>
+  </g>
+  <g class="arm">
+    <path d="M88 158 C58 146 38 150 34 168" fill="none" stroke="#3B4D5B" stroke-width="22" stroke-linecap="round"/>
+    <path d="M46 156 C40 162 36 166 34 168" fill="none" stroke="#A5E008" stroke-width="22" stroke-linecap="round"/>
+  </g>
+  <path d="M204 160 C230 168 242 182 236 198" fill="none" stroke="#3B4D5B" stroke-width="20" stroke-linecap="round"/>
+  <path d="M240 186 C238 192 236 196 236 198" fill="none" stroke="#A5E008" stroke-width="20" stroke-linecap="round"/>
+  <circle cx="146" cy="156" r="78" fill="#3B4D5B"/>
+  <circle cx="104" cy="124" r="6" fill="#F3F6F4"/>
+  <path d="M86 150c0-24 24-40 60-40s62 14 62 36c0 28-26 48-62 48s-60-18-60-44z" fill="#A5E008"/>
+  <g class="eye">
+    <circle cx="120" cy="150" r="16" fill="#D4F25C"/>
+    <circle cx="120" cy="150" r="7" fill="#3B4D5B"/>
+  </g>
+  <g class="eye">
+    <circle cx="172" cy="150" r="16" fill="#D4F25C"/>
+    <circle cx="172" cy="150" r="7" fill="#3B4D5B"/>
+  </g>
+  <path d="M124 178q22 14 44-1" fill="none" stroke="#3B4D5B" stroke-width="4" stroke-linecap="round"/>
+  <g class="antenna" fill="none" stroke="#A5E008" stroke-width="7" stroke-linecap="round">
+    <path d="M138 84c16-2 16-14-2-16c-18-2-18-14 0-16c16-2 16-14-2-16"/>
+  </g>
+  <g class="antenna">
+    <circle cx="124" cy="30" r="11" fill="#3B4D5B"/>
+    <circle cx="120" cy="26" r="2.6" fill="#E6EDF1"/>
+  </g>
+</svg>
