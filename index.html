@@ -2,40 +2,26 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <script>
-      ;(function () {
-        try {
-          var stored = localStorage.getItem('hk-theme')
-          var theme = stored === 'light' || stored === 'dark' ? stored : matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark'
-          document.documentElement.dataset.theme = theme
-          document.documentElement.style.colorScheme = theme
-          var meta = document.querySelector('meta[name="theme-color"]')
-          if (meta) meta.setAttribute('content', theme === 'light' ? '#f3efe6' : '#07080b')
-        } catch (error) {}
-      })()
-    </script>
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-    <meta name="theme-color" content="#07080b" />
+    <meta name="theme-color" content="#f5f5f3" />
     <meta name="description" content="Reykjavík studio. Draumabílar, Younes, Járnverk." />
     <meta property="og:title" content="HKS — The sites" />
     <meta property="og:description" content="Reykjavík studio. Draumabílar, Younes, Járnverk." />
     <meta property="og:type" content="website" />
     <meta name="twitter:card" content="summary" />
     <title>HKS — The sites</title>
-    <script type="module" crossorigin src="/assets/index-CvH8tH6J.js"></script>
-    <link rel="modulepreload" crossorigin href="/assets/rolldown-runtime-XKyaHtl9.js">
+    <script type="module" crossorigin src="/assets/index-Dh8G_9kw.js"></script>
     <link rel="modulepreload" crossorigin href="/assets/motion-Bb9OjKxf.js">
     <link rel="stylesheet" crossorigin href="/assets/motion-fOJvfYOR.css">
-    <link rel="stylesheet" crossorigin href="/assets/index-CHV6L9Mt.css">
+    <link rel="stylesheet" crossorigin href="/assets/index-BzR3ArQA.css">
   </head>
   <body>
     <div id="root"></div>
     <noscript>
-      <main style="max-width: 40rem; margin: 0 auto; padding: 3rem 1.25rem; font-family: Georgia, serif; line-height: 1.5">
-        <p style="letter-spacing: 0.16em; text-transform: uppercase; font-family: sans-serif; font-size: 0.75rem">Reykjavík</p>
+      <main style="max-width: 40rem; margin: 0 auto; padding: 3rem 1.25rem; font-family: Inter, Helvetica, sans-serif; line-height: 1.5; background: #f5f5f3; color: #141414">
         <h1>HKS</h1>
-        <p>The ventures, without the motion. Each link opens the live site.</p>
+        <p>Three sites from Reykjavík.</p>
         <ul>
             <li><a href="https://draumabilar.is">Draumabílar</a> <span>(Live)</span></li>
             <li><a href="https://younes.is">Younes</a> <span>(Coming soon)</span></li>
