@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <script>
+      ;(function () {
+        try {
+          var stored = localStorage.getItem('hk-theme')
+          var theme = stored === 'light' || stored === 'dark' ? stored : matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark'
+          document.documentElement.dataset.theme = theme
+          document.documentElement.style.colorScheme = theme
+          var meta = document.querySelector('meta[name="theme-color"]')
+          if (meta) meta.setAttribute('content', theme === 'light' ? '#f3efe6' : '#07080b')
+        } catch (error) {}
+      })()
+    </script>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#07080b" />
+    <meta name="description" content="Reykjavík studio. Draumabílar, Dream Cars, S9, Járnverk, Járn verktakar ehf." />
+    <meta property="og:title" content="HKS — The sites" />
+    <meta property="og:description" content="Reykjavík studio. Draumabílar, Dream Cars, S9, Járnverk, Járn verktakar ehf." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary" />
+    <title>HKS — The sites</title>
+    <script type="module" crossorigin src="/assets/index-DN3nLllD.js"></script>
+    <link rel="modulepreload" crossorigin href="/assets/rolldown-runtime-XKyaHtl9.js">
+    <link rel="modulepreload" crossorigin href="/assets/motion-Bb9OjKxf.js">
+    <link rel="stylesheet" crossorigin href="/assets/motion-fOJvfYOR.css">
+    <link rel="stylesheet" crossorigin href="/assets/index-CV2HfVoj.css">
+  </head>
+  <body>
+    <div id="root"></div>
+    <noscript>
+      <main style="max-width: 40rem; margin: 0 auto; padding: 3rem 1.25rem; font-family: Georgia, serif; line-height: 1.5">
+        <p style="letter-spacing: 0.16em; text-transform: uppercase; font-family: sans-serif; font-size: 0.75rem">Reykjavík</p>
+        <h1>HKS</h1>
+        <p>The ventures, without the motion. Each link opens the live site.</p>
+        <ul>
+            <li><a href="https://draumabilar.is">Draumabílar</a> <span>(Live)</span></li>
+            <li><a href="https://dreamcars.is">Dream Cars</a> <span>(Coming soon)</span></li>
+            <li><a href="https://s9.is">S9</a> <span>(Coming soon)</span></li>
+            <li><a href="https://jarnverk.is">Járnverk</a> <span>(Live)</span></li>
+            <li><a href="https://jarnverktakar.is">Járn verktakar ehf.</a> <span>(Live)</span></li>
+        </ul>
+      </main>
+    </noscript>
+  </body>
+</html>
