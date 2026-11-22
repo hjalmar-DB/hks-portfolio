@@ -1,7 +1,7 @@
 {
   "name": "wobo",
   "short_name": "wobo",
-  "description": "Three sites from Reykjavík.",
+  "description": "Wobo hannar og smíðar vefsíður, vefverslanir og sérsniðin vefkerfi.",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",
