@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://wobo.is/</loc></url>
-  <url><loc>https://wobo.is/verd/</loc></url>
-  <url><loc>https://wobo.is/thjonusta/crm/</loc></url>
-  <url><loc>https://wobo.is/verkefni/draumabilar/</loc></url>
+  <url><loc>https://wobo.is/</loc><lastmod>2026-11-24</lastmod></url>
+  <url><loc>https://wobo.is/verd/</loc><lastmod>2026-11-24</lastmod></url>
+  <url><loc>https://wobo.is/thjonusta/crm/</loc><lastmod>2026-11-24</lastmod></url>
+  <url><loc>https://wobo.is/vefsidugerd/</loc><lastmod>2026-11-24</lastmod></url>
+  <url><loc>https://wobo.is/vefverslun/</loc><lastmod>2026-11-24</lastmod></url>
+  <url><loc>https://wobo.is/vefsidugerd-reykjavik/</loc><lastmod>2026-11-24</lastmod></url>
+  <url><loc>https://wobo.is/bokunarkerfi-og-crm/</loc><lastmod>2026-11-24</lastmod></url>
+  <url><loc>https://wobo.is/verkefni/draumabilar/</loc><lastmod>2026-11-24</lastmod></url>
 </urlset>
