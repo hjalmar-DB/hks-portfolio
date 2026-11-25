@@ -1,0 +1,35 @@
+# Headers for the existing wobo.is static site.
+# Do not sync this Blueprint until `name` matches the service already serving
+# wobo.is. A different name creates a second site. Static sites ignore region.
+# The build command is idempotent. If the dashboard build command is empty
+# today, you can instead paste the headers into Settings → Headers and leave
+# the build command unchanged. Generated files are already committed.
+# Do not add a catch-all rewrite to /index.html. That would hide real 404s.
+services:
+  - type: web
+    name: wobo
+    runtime: static
+    buildCommand: node scripts/build.mjs
+    staticPublishPath: .
+    headers:
+      - path: /*
+        name: X-Content-Type-Options
+        value: nosniff
+      - path: /*
+        name: Referrer-Policy
+        value: strict-origin-when-cross-origin
+      - path: /*
+        name: Permissions-Policy
+        value: "camera=(), microphone=(), geolocation=(), payment=(), usb=()"
+      - path: /*
+        name: X-Frame-Options
+        value: DENY
+      - path: /*
+        name: Content-Security-Policy
+        value: "frame-ancestors 'none'"
+      - path: /*
+        name: Strict-Transport-Security
+        value: max-age=31536000
+      - path: /404.html
+        name: X-Robots-Tag
+        value: noindex, follow
