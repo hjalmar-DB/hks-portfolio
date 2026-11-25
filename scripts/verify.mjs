@@ -86,40 +86,84 @@ function startServer(rules) {
   });
 }
 
-const draft = parseFrontmatter(read("content/blogg/hvad-fylgir-vefsidu.md"), "hvad-fylgir-vefsidu.md");
-validatePost(draft.data, "hvad-fylgir-vefsidu.md");
-check(draft.data.draft === true, "example post is not draft");
-const rendered = renderMarkdown(draft.body);
-check(rendered.html.includes("<h2"), "draft markdown did not render an h2");
-check(rendered.html.includes('href="/verd/"'), "draft markdown lost an internal link");
-check(rendered.html.includes('loading="lazy"'), "draft image is not lazy");
-check(rendered.toc.length >= 2, "draft is missing a table of contents");
-check(!fs.existsSync(path.join(root, "blogg", "hvad-fylgir-vefsidu")), "draft post was published");
+check(!fs.existsSync(path.join(root, "content/blogg/hvad-fylgir-vefsidu.md")), "merged draft still exists");
+check(!fs.existsSync(path.join(root, "blogg", "hvad-fylgir-vefsidu")), "removed post was published");
+
+const articleSource = parseFrontmatter(read("content/blogg/hvad-kostar-vefsida.md"), "hvad-kostar-vefsida.md");
+validatePost(articleSource.data, "hvad-kostar-vefsida.md");
+check(articleSource.data.draft !== true, "article is still a draft");
+check(articleSource.data.slug === "hvad-kostar-vefsida", "article slug changed");
+const rendered = renderMarkdown(articleSource.body);
+check(rendered.html.includes("<h2"), "article markdown did not render an h2");
+check(rendered.html.includes('href="/verd/"'), "article markdown lost an internal link");
+check(rendered.toc.length >= 2, "article is missing a table of contents");
 
 const blog = read("blogg/index.html");
-check(blog.includes("Greinar koma brátt"), "empty blog state missing");
-check(blog.includes('content="noindex, follow"'), "empty blog is not noindex");
+check(!blog.includes("Greinar koma brátt"), "empty blog state is still showing");
+check(!blog.includes("noindex"), "blog index is noindex");
+check(blog.includes('content="index, follow"'), "blog index is not indexable");
 check(blog.includes('rel="canonical" href="https://wobo.is/blogg/"'), "blog canonical missing");
 check(blog.includes("<title>Blogg | Wobo</title>"), "blog title missing");
 check(blog.includes("og:description"), "blog og description missing");
 check(blog.includes("twitter:title"), "blog twitter title missing");
 check(blog.includes("BreadcrumbList"), "blog breadcrumbs json-ld missing");
 check(blog.includes('href="/blogg/">Blogg</a>'), "blog nav link missing on the blog page");
-check(!blog.includes("hvad-fylgir-vefsidu"), "draft slug leaked into the blog index");
+check(blog.includes("/blogg/hvad-kostar-vefsida/"), "published article missing from the blog index");
+check(!blog.includes("hvad-fylgir-vefsidu"), "removed slug leaked into the blog index");
+
+const article = read("blogg/hvad-kostar-vefsida/index.html");
+check(
+  article.includes("<title>Hvað kostar vefsíða á Íslandi? Verð og kostnaðarliðir | Wobo blogg</title>"),
+  "article title missing",
+);
+check(
+  article.includes(
+    'name="description" content="Hvað kostar vefsíða? Við förum yfir verðbilið á íslenskum markaði, hvað ræður verðinu, kostnað sem gleymist og verð Wobo, frá 89.000 kr. án vsk."',
+  ),
+  "article meta description missing",
+);
+check(article.includes('"@type":["Article","BlogPosting"]'), "article Article json-ld missing");
+check(article.includes('"@type":"FAQPage"'), "article FAQPage json-ld missing");
+check(article.includes('rel="canonical" href="https://wobo.is/blogg/hvad-kostar-vefsida/"'), "article canonical missing");
+check(!article.includes("noindex"), "article is noindex");
 
 const feed = read("blogg/feed.xml");
 check(feed.includes("<rss version=\"2.0\">"), "feed is not rss");
 check(feed.includes("<language>is</language>"), "feed language missing");
-check(!feed.includes("<item>"), "feed published the draft");
+check(feed.includes("https://wobo.is/blogg/hvad-kostar-vefsida/"), "feed is missing the article");
+check(!feed.includes("hvad-fylgir-vefsidu"), "feed still lists the removed post");
 
 const sitemap = read("sitemap.xml");
-check(!sitemap.includes("/blogg"), "empty noindex blog was added to the sitemap");
+check(sitemap.includes("https://wobo.is/blogg/</loc>"), "sitemap is missing /blogg/");
+check(sitemap.includes("https://wobo.is/blogg/hvad-kostar-vefsida/</loc>"), "sitemap is missing the article");
+check(sitemap.includes("<lastmod>2026-11-30</lastmod>"), "sitemap lastmod is not the article date");
 check(sitemap.includes("https://wobo.is/vefsidugerd/"), "sitemap lost an existing url");
+check(!sitemap.includes("hvad-fylgir-vefsidu"), "sitemap still lists the removed post");
 
 const llms = read("llms.txt");
-for (const bit of ["wobo@wobo.is", "89.000", "189.000", "259.000", "149.000", "16.900", "https://wobo.is/blogg/", "Bókunarkerfi", "Reykjavík"]) {
+for (const bit of [
+  "wobo@wobo.is",
+  "89.000",
+  "189.000",
+  "259.000",
+  "149.000",
+  "16.900",
+  "https://wobo.is/blogg/",
+  "https://wobo.is/blogg/hvad-kostar-vefsida/",
+  "Bókunarkerfi",
+  "Reykjavík",
+]) {
   check(llms.includes(bit), `llms.txt missing ${bit}`);
 }
+check(!llms.includes("Engar greinar hafa birst"), "llms.txt still says the blog is empty");
+check(!llms.includes("hvad-fylgir-vefsidu"), "llms.txt still lists the removed post");
+
+const ownership =
+  "Vefurinn er ykkar eign eftir afhendingu. Þið eigið líka textann og myndirnar sem þið leggið til. Ef þið kaupið umsjón höldum við áfram að uppfæra. Annars lýkur okkar vinnu við afhendingu.";
+const verd = read("verd/index.html");
+const verdFaq = (verd.match(new RegExp(ownership.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"), "g")) || []).length;
+check(verdFaq >= 2, "verd FAQ answer missing from the page and JSON-LD");
+check(!verd.includes("Annars skiljum við við verkið þegar það er afhent."), "old verd FAQ answer remains");
 
 const notFound = read("404.html");
 check(notFound.includes('content="noindex, follow"'), "404.html is still indexable");
@@ -155,9 +199,13 @@ check(js.includes('path:`/blogg`'), "client router is missing /blogg");
 const encoded = js.match(/decodeURIComponent\("([^"]+)"\)/);
 check(encoded, "client blog payload missing");
 const blogState = encoded ? JSON.parse(decodeURIComponent(encoded[1])) : {};
-check(blogState.indexHtml?.includes("Greinar koma brátt"), "client blog state missing");
-check(blogState.indexRobots === "noindex, follow", "client blog robots are not noindex while empty");
-check(Array.isArray(blogState.posts) && blogState.posts.length === 0, "client bundle published a post");
+check(!blogState.indexHtml?.includes("Greinar koma brátt"), "client blog still shows the empty state");
+check(blogState.indexRobots === "index, follow", "client blog robots are not indexable");
+check(
+  Array.isArray(blogState.posts) && blogState.posts.length === 1 && blogState.posts[0].slug === "hvad-kostar-vefsida",
+  "client bundle is missing the published article",
+);
+check(js.includes(ownership), "bundle is missing the updated ownership answer");
 check(js.includes("l||`index, follow`"), "live robots default was overwritten");
 check(js.includes("robots:`noindex, follow`"), "404 route does not set noindex");
 check(js.includes("formsubmit.co"), "quote form endpoint was lost");
@@ -209,10 +257,19 @@ check(llmsRes.response.headers.get("content-type").includes("text/plain"), "llms
 
 const blogRes = await get("/blogg/");
 check(blogRes.response.status === 200, "/blogg/ was not served");
-check(blogRes.text.includes("Greinar koma brátt"), "/blogg/ body missing empty state");
+check(!blogRes.text.includes("Greinar koma brátt"), "/blogg/ still shows the empty state");
+check(blogRes.text.includes("/blogg/hvad-kostar-vefsida/"), "/blogg/ is missing the article");
+check(!blogRes.text.includes("noindex"), "/blogg/ response is noindex");
+
+const articleRes = await get("/blogg/hvad-kostar-vefsida/");
+check(articleRes.response.status === 200, "article was not served");
+check(articleRes.text.includes("Hvað kostar vefsíða á Íslandi?"), "article response is missing the title");
+check(articleRes.text.includes('"@type":"FAQPage"'), "article response is missing FAQPage");
+check(!articleRes.text.includes("noindex"), "article response is noindex");
 
 const feedRes = await get("/blogg/feed.xml");
 check(feedRes.response.status === 200, "feed was not served");
+check(feedRes.text.includes("https://wobo.is/blogg/hvad-kostar-vefsida/"), "served feed is missing the article");
 
 server.close();
 
