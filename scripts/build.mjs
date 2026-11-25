@@ -270,6 +270,10 @@ function applyCopy(text) {
       "Bókunarkerfi og tímapantanir á vefnum, með eyðublaði eða tengingu. Hluti af Sérlausn, frá 259.000 kr. án vsk. CRM er á sér síðu.",
     ],
     ["Umfang og verð vefsíðugerðar", "Vefsíðugerð: umfang og verð"],
+    ["Braustígur", "Brauðmolaslóð"],
+    ["Talan er byrjunin.", "Uppgefin verð eru upphafsverð."],
+    ["Síðan sem er á lofti.", "Síðan sem er komin í loftið."],
+    ["Wobo Start er minni síða, ein til fimm síður.", "Wobo Start er fyrir minni vef, eina til fimm síður."],
   ];
   let next = text;
   for (const [from, to] of pairs) {
