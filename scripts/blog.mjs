@@ -309,7 +309,7 @@ function crumbsHtml(items) {
       return `<li><a href="${escapeHtml(item.href)}">${escapeHtml(item.name)}</a></li>`;
     })
     .join("");
-  return `<nav class="crumbs" aria-label="Braustígur"><ol>${lis}</ol></nav>`;
+  return `<nav class="crumbs" aria-label="Brauðmolaslóð"><ol>${lis}</ol></nav>`;
 }
 
 function businessNode() {
@@ -392,11 +392,11 @@ function faqHtml(faq) {
   const rows = faq
     .map((item) => `<div><dt>${escapeHtml(item.q)}</dt><dd>${escapeHtml(item.a)}</dd></div>`)
     .join("");
-  return `<section class="faq" aria-labelledby="faq-title"><h2 id="faq-title">Spurningar</h2><dl>${rows}</dl></section>`;
+  return `<section class="faq" aria-labelledby="faq-title"><h2 id="faq-title">Algengar spurningar</h2><dl>${rows}</dl></section>`;
 }
 
 function ctaHtml() {
-  return `<aside class="blog-cta"><h2>Fá tilboð</h2><p>Segðu hvað þig vantar. Við svörum og sendum fast verð áður en vinna hefst.</p><a class="button solid" href="/#inquiry">Senda fyrirspurn</a></aside>`;
+  return `<aside class="blog-cta"><h2>Fá tilboð</h2><p>Segðu okkur hvað þig vantar. Við svörum og sendum fast tilboð áður en vinna hefst.</p><a class="button solid" href="/#inquiry">Senda fyrirspurn</a></aside>`;
 }
 
 function relatedHtml(related) {
@@ -446,8 +446,8 @@ export function renderIndexInner(posts) {
     return [
       crumbs,
       "<h1>Blogg</h1>",
-      '<p class="lede">Stuttar greinar um vefsíður, verð og kerfi. Ekkert er birt hér enn.</p>',
-      '<div class="blog-empty"><p class="meta">Blogg</p><h2>Greinar koma brátt</h2><p>Hér birtast greinar þegar þær eru tilbúnar. Þar til þá er verðskráin og fyrirspurnarformið opin.</p><div class="hero-actions"><a class="button solid" href="/#inquiry">Senda fyrirspurn</a><a class="button ghost" href="/verd/">Sjá verð</a></div></div>',
+      '<p class="lede">Hér koma stuttar greinar um vefsíður, verð og kerfi. Engar greinar eru komnar enn.</p>',
+      '<div class="blog-empty"><p class="meta">Blogg</p><h2>Greinar koma brátt</h2><p>Hér birtast greinar þegar þær eru tilbúnar. Þangað til geturðu skoðað verðskrána eða sent okkur fyrirspurn.</p><div class="hero-actions"><a class="button solid" href="/#inquiry">Senda fyrirspurn</a><a class="button ghost" href="/verd/">Sjá verð</a></div></div>',
     ].join("");
   }
   const cards = posts
@@ -651,12 +651,12 @@ ${items}
 export function buildLlms(posts) {
   const postLines = posts.length
     ? posts.map((post) => `- [${post.title}](${absUrl(post.path)}): ${post.description}`).join("\n")
-    : "- Engar greinar eru birtar enn. Yfirlitssíðan er https://wobo.is/blogg/ og er merkt noindex þar til fyrsta grein birtist.";
+    : "- Engar greinar hafa birst enn. Yfirlitssíðan, https://wobo.is/blogg/, er merkt noindex þar til fyrsta greinin birtist.";
   return `# Wobo
 
 > Wobo er vefsíðustúdíó í Reykjavík. Við smíðum vefsíður, vefverslanir og CRM-kerfi fyrir lítil fyrirtæki. Textinn á síðunni er á íslensku. Verð eru án vsk. Fast tilboð kemur áður en vinna hefst.
 
-Wobo gefur ekki upp heimilisfang skrifstofu og birtir ekki símanúmer. Samband er í tölvupósti og í forminu á síðunni.
+Wobo gefur ekki upp heimilisfang skrifstofu og birtir ekki símanúmer. Hægt er að hafa samband með tölvupósti eða í gegnum formið á síðunni.
 
 ## Samband
 
@@ -667,10 +667,10 @@ Wobo gefur ekki upp heimilisfang skrifstofu og birtir ekki símanúmer. Samband 
 ## Síður
 
 - [Forsíða](https://wobo.is/): vefsíðustúdíó í Reykjavík. Vefsíður fyrir fyrirtæki. Pakki með vef, CRM og umsjón frá 189.000 kr. Vefsíða ein og sér frá 89.000 kr.
-- [Vefsíðugerð](https://wobo.is/vefsidugerd/): almenn síða um umfang og verð vefsíðu, ekki staðbundin leit.
-- [Vefsíðugerð í Reykjavík](https://wobo.is/vefsidugerd-reykjavik/): stúdíóið í Reykjavík, samband og verkefnið sem er á lofti í borginni.
+- [Vefsíðugerð](https://wobo.is/vefsidugerd/): almenn síða um umfang og verð vefsíðu, ekki bundin við Reykjavík.
+- [Vefsíðugerð í Reykjavík](https://wobo.is/vefsidugerd-reykjavik/): stúdíóið í Reykjavík, samband og verkefnið sem er komið í loftið þar.
 - [Vefverslun](https://wobo.is/vefverslun/): vefverslun er hluti af Sérlausn, frá 259.000 kr.
-- [Bókunarkerfi](https://wobo.is/bokunarkerfi-og-crm/): tímapantanir og eyðublöð á vefnum. Ekki sama síða og CRM-listinn.
+- [Bókunarkerfi](https://wobo.is/bokunarkerfi-og-crm/): tímapantanir og eyðublöð á vefnum. CRM er á sér síðu.
 - [CRM-kerfi](https://wobo.is/thjonusta/crm/): listi yfir fyrirspurnir, tilboð og viðskiptavini. HubSpot, Pipedrive, CRM Light eða sérsmíði.
 - [Verð](https://wobo.is/verd/): öll verð á einum stað, án vsk.
 - [Draumabílar](https://wobo.is/verkefni/draumabilar/): eina verkefnið sem er sýnt opinberlega. Bílasíða, ekki netverslun.
@@ -678,9 +678,9 @@ Wobo gefur ekki upp heimilisfang skrifstofu og birtir ekki símanúmer. Samband 
 
 ## Verð án vsk
 
-Talan er byrjunin nema annað sé tekið fram. Fast tilboð kemur áður en vinna hefst.
+Uppgefin verð eru upphafsverð nema annað sé tekið fram. Fast tilboð kemur áður en vinna hefst.
 
-- Wobo Start: frá 89.000 kr. Ein til fimm síður, sími, sambandsform, grunnur fyrir leitarvélar.
+- Wobo Start: frá 89.000 kr. Ein til fimm síður, útlit fyrir síma, sambandsform, grunnur fyrir leitarvélar.
 - Wobo Fyrirtæki: frá 189.000 kr. Fleiri síður, verkefni, fyrirspurnaform, uppsetning í Google.
 - Sérlausn: frá 259.000 kr. Vefverslun, bókanir, tengingar við önnur kerfi.
 - CRM uppsetning: frá 149.000 kr. HubSpot eða Pipedrive.
@@ -694,7 +694,7 @@ Talan er byrjunin nema annað sé tekið fram. Fast tilboð kemur áður en vinn
 - Umsjón, meiri: 29.900 kr. á mánuði.
 - Tímagjald: 16.900 kr. á klukkustund.
 
-Mánaðargjald er hýsing, uppfærslur og smáar breytingar. Það er ekki ný síða í hverjum mánuði.
+Mánaðargjaldið nær yfir hýsingu, uppfærslur og smáar breytingar. Það felur ekki í sér nýja síðu í hverjum mánuði.
 
 ## Blogg
 

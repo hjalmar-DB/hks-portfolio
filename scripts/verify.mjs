@@ -128,7 +128,7 @@ const booking = read("bokunarkerfi-og-crm/index.html");
 check(booking.includes("<title>Bókunarkerfi fyrir lítil fyrirtæki | Wobo</title>"), "booking title was not differentiated");
 check(booking.includes("<h1>Bókunarkerfi</h1>"), "booking h1 was not differentiated");
 check(!booking.includes("Bókanakerfi"), "booking page still has the typo");
-check(booking.includes("CRM-listinn er á sér síðu"), "booking description was not differentiated");
+check(booking.includes("CRM er á sér síðu"), "booking description was not differentiated");
 
 const crm = read("thjonusta/crm/index.html");
 check(crm.includes("<h1>CRM-kerfi fyrir lítil fyrirtæki</h1>"), "crm h1 was not differentiated");
@@ -137,12 +137,12 @@ check(crm.includes("Nánar um bókunarkerfi"), "crm page does not cross-link to 
 
 const general = read("vefsidugerd/index.html");
 check(general.includes("Umfang og verð"), "general web page title was not differentiated");
-check(general.includes("Vefsíðugerð í Reykjavík, sem lýsir stúdíóinu"), "general page does not point at the local page");
+check(general.includes("Um stúdíóið sjálft má lesa á síðunni Vefsíðugerð í Reykjavík."), "general page does not point at the local page");
 check(!general.includes("Vefsíðugerð fyrir fyrirtæki í Reykjavík."), "general description still leads with Reykjavík");
 
 const local = read("vefsidugerd-reykjavik/index.html");
 check(local.includes("Vefsíðustúdíó – Wobo"), "local title was not differentiated");
-check(local.includes("Umfang og verð vefsíðugerðar"), "local page does not cross-link to the general page");
+check(local.includes("Vefsíðugerð: umfang og verð"), "local page does not cross-link to the general page");
 check(local.includes('content="is_IS"'), "og:locale missing");
 
 const home = read("index.html");

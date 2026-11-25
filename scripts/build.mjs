@@ -209,11 +209,11 @@ function applyCopy(text) {
     ],
     [
       "Wobo í Reykjavík smíðar vefsíður fyrir fyrirtæki. Síðan á að vera skýr í síma og í tölvu, og verðið á að liggja fyrir áður en við byrjum.",
-      "Þessi síða er um umfangið: hvað fylgir vefsíðu og hvað hún kostar. Síðan á að vera skýr í síma og í tölvu, og verðið á að liggja fyrir áður en við byrjum.",
+      "Hér sérðu hvað fylgir vefsíðu frá Wobo og hvað hún kostar. Síðan á að vera skýr í síma og í tölvu, og verðið á að liggja fyrir áður en við byrjum.",
     ],
     [
       "Ef þig vantar vefverslun er sú síða sér. Bókanir og CRM eru líka sér. Verðskráin er á einum stað svo tölurnar séu þær sömu alls staðar.",
-      "Ef þig vantar vefverslun er sú síða sér. Bókanir og CRM eru líka sér. Vefsíðugerð í Reykjavík, sem lýsir stúdíóinu, er líka sér síða. Verðskráin er á einum stað svo tölurnar séu þær sömu alls staðar.",
+      "Ef þig vantar vefverslun er sú síða sér. Bókanir og CRM eru líka sér. Um stúdíóið sjálft má lesa á síðunni Vefsíðugerð í Reykjavík. Verðskráin er á einum stað svo tölurnar séu þær sömu alls staðar.",
     ],
     [
       "Vefsíðugerð í Reykjavík | Wobo",
@@ -221,11 +221,11 @@ function applyCopy(text) {
     ],
     [
       "Vefsíðugerð í Reykjavík hjá Wobo. Vefsíður, vefverslanir og CRM fyrir fyrirtæki. Pakkar frá 189.000 kr. án vsk. Fast tilboð fyrst.",
-      "Vefsíðustúdíó í Reykjavík. Samband á wobo@wobo.is. Umfang og verð vefsíðu eru á síðunni um vefsíðugerð.",
+      "Wobo er vefsíðustúdíó í Reykjavík. Hafðu samband á wobo@wobo.is. Hvað vefsíða kostar og hvað fylgir henni sérðu á síðunni um vefsíðugerð.",
     ],
     [
       "Wobo er vefsíðustúdíó í Reykjavík. Við smíðum vefsíður, vefverslanir og CRM fyrir fyrirtæki í borginni og annars staðar á Íslandi.",
-      "Wobo er vefsíðustúdíó í Reykjavík. Þessi síða er um stúdíóið og samband. Umfang og verð vefsíðu eru á síðunni um vefsíðugerð.",
+      "Wobo er vefsíðustúdíó í Reykjavík. Hér segjum við frá stúdíóinu og hvernig þú nærð í okkur. Hvað vefsíða kostar og hvað fylgir henni sérðu á síðunni um vefsíðugerð.",
     ],
     [
       "Bókanakerfi og CRM | Wobo",
@@ -233,7 +233,7 @@ function applyCopy(text) {
     ],
     [
       "Bókanir og CRM fyrir lítil fyrirtæki í Reykjavík. Bókanir í Sérlausn frá 259.000 kr. CRM frá 149.000 kr. án vsk. Fast tilboð fyrst.",
-      "Bókunarkerfi og tímapantanir á vefnum. Eyðublað eða tenging í Sérlausn, frá 259.000 kr. án vsk. CRM-listinn er á sér síðu.",
+      "Bókunarkerfi og tímapantanir á vefnum, með eyðublaði eða tengingu. Hluti af Sérlausn, frá 259.000 kr. án vsk. CRM er á sér síðu.",
     ],
     [
       "CRM fyrir lítil fyrirtæki í Reykjavík. HubSpot, Pipedrive, CRM Light eða sérsmíði. Frá 149.000 kr. án vsk. Bókanir eru sér síða.",
@@ -243,12 +243,33 @@ function applyCopy(text) {
     ["children:`CRM-kerfi`})", "children:`CRM-kerfi fyrir lítil fyrirtæki`})"],
     [
       "{href:`/vefsidugerd/`,label:`Vefsíðugerð`},{href:`/vefverslun/`,label:`Vefverslun`},{href:`/thjonusta/crm/`,label:`CRM`",
-      "{href:`/vefsidugerd/`,label:`Umfang og verð vefsíðugerðar`},{href:`/vefverslun/`,label:`Vefverslun`},{href:`/thjonusta/crm/`,label:`CRM`",
+      "{href:`/vefsidugerd/`,label:`Vefsíðugerð: umfang og verð`},{href:`/vefverslun/`,label:`Vefverslun`},{href:`/thjonusta/crm/`,label:`CRM`",
     ],
     [
       '<a href="/vefsidugerd/" data-discover="true">Vefsíðugerð</a></li><li><a href="/vefverslun/" data-discover="true">Vefverslun</a></li><li><a href="/thjonusta/crm/" data-discover="true">CRM</a>',
-      '<a href="/vefsidugerd/" data-discover="true">Umfang og verð vefsíðugerðar</a></li><li><a href="/vefverslun/" data-discover="true">Vefverslun</a></li><li><a href="/thjonusta/crm/" data-discover="true">CRM</a>',
+      '<a href="/vefsidugerd/" data-discover="true">Vefsíðugerð: umfang og verð</a></li><li><a href="/vefverslun/" data-discover="true">Vefverslun</a></li><li><a href="/thjonusta/crm/" data-discover="true">CRM</a>',
     ],
+    [
+      "Þessi síða er um umfangið: hvað fylgir vefsíðu og hvað hún kostar.",
+      "Hér sérðu hvað fylgir vefsíðu frá Wobo og hvað hún kostar.",
+    ],
+    [
+      "Vefsíðugerð í Reykjavík, sem lýsir stúdíóinu, er líka sér síða.",
+      "Um stúdíóið sjálft má lesa á síðunni Vefsíðugerð í Reykjavík.",
+    ],
+    [
+      "Vefsíðustúdíó í Reykjavík. Samband á wobo@wobo.is. Umfang og verð vefsíðu eru á síðunni um vefsíðugerð.",
+      "Wobo er vefsíðustúdíó í Reykjavík. Hafðu samband á wobo@wobo.is. Hvað vefsíða kostar og hvað fylgir henni sérðu á síðunni um vefsíðugerð.",
+    ],
+    [
+      "Þessi síða er um stúdíóið og samband. Umfang og verð vefsíðu eru á síðunni um vefsíðugerð.",
+      "Hér segjum við frá stúdíóinu og hvernig þú nærð í okkur. Hvað vefsíða kostar og hvað fylgir henni sérðu á síðunni um vefsíðugerð.",
+    ],
+    [
+      "Bókunarkerfi og tímapantanir á vefnum. Eyðublað eða tenging í Sérlausn, frá 259.000 kr. án vsk. CRM-listinn er á sér síðu.",
+      "Bókunarkerfi og tímapantanir á vefnum, með eyðublaði eða tengingu. Hluti af Sérlausn, frá 259.000 kr. án vsk. CRM er á sér síðu.",
+    ],
+    ["Umfang og verð vefsíðugerðar", "Vefsíðugerð: umfang og verð"],
   ];
   let next = text;
   for (const [from, to] of pairs) {
