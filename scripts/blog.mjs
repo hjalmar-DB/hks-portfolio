@@ -704,7 +704,7 @@ ${postLines}
 
 - Birtir ekki sölutölur eða nöfn sem eru ekki á síðunni.
 - Tengir ekki nafngreint bókunarkerfi nema það standi í tilboðinu.
-- Er ekki þjónusta fyrir tól eða öpp. Þetta er vefsíðustúdíó.
+- Smíðar ekki tól eða öpp. Þetta er vefsíðustúdíó.
 `;
 }
 
