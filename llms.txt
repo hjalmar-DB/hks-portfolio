@@ -1,0 +1,53 @@
+# Wobo
+
+> Wobo er vefsíðustúdíó í Reykjavík. Við smíðum vefsíður, vefverslanir og CRM-kerfi fyrir lítil fyrirtæki. Textinn á síðunni er á íslensku. Verð eru án vsk. Fast tilboð kemur áður en vinna hefst.
+
+Wobo gefur ekki upp heimilisfang skrifstofu og birtir ekki símanúmer. Samband er í tölvupósti og í forminu á síðunni.
+
+## Samband
+
+- Netfang: wobo@wobo.is
+- Fyrirspurn: https://wobo.is/#hafa-samband
+- Staður: Reykjavík, Ísland
+
+## Síður
+
+- [Forsíða](https://wobo.is/): vefsíðustúdíó í Reykjavík. Vefsíður fyrir fyrirtæki. Pakki með vef, CRM og umsjón frá 189.000 kr. Vefsíða ein og sér frá 89.000 kr.
+- [Vefsíðugerð](https://wobo.is/vefsidugerd/): almenn síða um umfang og verð vefsíðu, ekki staðbundin leit.
+- [Vefsíðugerð í Reykjavík](https://wobo.is/vefsidugerd-reykjavik/): stúdíóið í Reykjavík, samband og verkefnið sem er á lofti í borginni.
+- [Vefverslun](https://wobo.is/vefverslun/): vefverslun er hluti af Sérlausn, frá 259.000 kr.
+- [Bókunarkerfi](https://wobo.is/bokunarkerfi-og-crm/): tímapantanir og eyðublöð á vefnum. Ekki sama síða og CRM-listinn.
+- [CRM-kerfi](https://wobo.is/thjonusta/crm/): listi yfir fyrirspurnir, tilboð og viðskiptavini. HubSpot, Pipedrive, CRM Light eða sérsmíði.
+- [Verð](https://wobo.is/verd/): öll verð á einum stað, án vsk.
+- [Draumabílar](https://wobo.is/verkefni/draumabilar/): eina verkefnið sem er sýnt opinberlega. Bílasíða, ekki netverslun.
+- [Blogg](https://wobo.is/blogg/): greinar. Straumur: https://wobo.is/blogg/feed.xml
+
+## Verð án vsk
+
+Talan er byrjunin nema annað sé tekið fram. Fast tilboð kemur áður en vinna hefst.
+
+- Wobo Start: frá 89.000 kr. Ein til fimm síður, sími, sambandsform, grunnur fyrir leitarvélar.
+- Wobo Fyrirtæki: frá 189.000 kr. Fleiri síður, verkefni, fyrirspurnaform, uppsetning í Google.
+- Sérlausn: frá 259.000 kr. Vefverslun, bókanir, tengingar við önnur kerfi.
+- CRM uppsetning: frá 149.000 kr. HubSpot eða Pipedrive.
+- CRM Light: frá 290.000 kr.
+- Sérsmíðað CRM: frá 360.000 kr.
+- Byrjunarpakki: 189.000 kr. og 4.900 kr. á mánuði. Wobo Start, CRM uppsetning og lítil umsjón. Umsjónin er bundin í 12 mánuði.
+- Fyrirtækjapakki: 379.000 kr. og 11.900 kr. á mánuði. Wobo Fyrirtæki, CRM Light og umsjón.
+- Heildarpakki: frá 489.000 kr. og 24.900 kr. á mánuði. Sérlausn, sérsmíðað CRM og meiri umsjón.
+- Umsjón, lítil: 6.900 kr. á mánuði.
+- Umsjón: 14.900 kr. á mánuði.
+- Umsjón, meiri: 29.900 kr. á mánuði.
+- Tímagjald: 16.900 kr. á klukkustund.
+
+Mánaðargjald er hýsing, uppfærslur og smáar breytingar. Það er ekki ný síða í hverjum mánuði.
+
+## Blogg
+
+- Engar greinar eru birtar enn. Yfirlitssíðan er https://wobo.is/blogg/ og er merkt noindex þar til fyrsta grein birtist.
+
+## Hvað Wobo gerir ekki
+
+- Birtir ekki sölutölur eða nöfn sem eru ekki á síðunni.
+- Tengir ekki nafngreint bókunarkerfi nema það standi í tilboðinu.
+- Er ekki þjónusta fyrir tól eða öpp. Þetta er vefsíðustúdíó.
