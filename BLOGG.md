@@ -39,7 +39,7 @@ draft: true
 - `cover` og `coverAlt` fylgjast að. `coverWidth` og `coverHeight` eru valfrjáls og minnka stökk í útliti.
 - `faq` er valfrjálst. Ef það er til birtist FAQ-blokk og FAQPage í JSON-LD.
 
-Dæmi sem er ekki birt: `content/blogg/hvad-fylgir-vefsidu.md`.
+Birt grein: `content/blogg/hvad-kostar-vefsida.md`.
 
 ## Efni
 

@@ -274,6 +274,10 @@ function applyCopy(text) {
     ["Talan er byrjunin.", "Uppgefin verð eru upphafsverð."],
     ["Síðan sem er á lofti.", "Síðan sem er komin í loftið."],
     ["Wobo Start er minni síða, ein til fimm síður.", "Wobo Start er fyrir minni vef, eina til fimm síður."],
+    [
+      "Þið eigið textann og myndirnar sem þið leggið til. Síðan sem við smíðum er afhent ykkur. Ef þið kaupið umsjón höldum við áfram að uppfæra. Annars skiljum við við verkið þegar það er afhent.",
+      "Vefurinn er ykkar eign eftir afhendingu. Þið eigið líka textann og myndirnar sem þið leggið til. Ef þið kaupið umsjón höldum við áfram að uppfæra. Annars lýkur okkar vinnu við afhendingu.",
+    ],
   ];
   let next = text;
   for (const [from, to] of pairs) {

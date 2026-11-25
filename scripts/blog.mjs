@@ -530,7 +530,7 @@ export function preparePost(raw, posts) {
     },
     breadcrumbNode(crumbs),
     {
-      "@type": "BlogPosting",
+      "@type": ["Article", "BlogPosting"],
       headline: post.title,
       description: post.description,
       datePublished: post.date,

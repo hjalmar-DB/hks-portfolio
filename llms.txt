@@ -44,7 +44,7 @@ Mánaðargjaldið nær yfir hýsingu, uppfærslur og smáar breytingar. Það fe
 
 ## Blogg
 
-- Engar greinar hafa birst enn. Yfirlitssíðan, https://wobo.is/blogg/, er merkt noindex þar til fyrsta greinin birtist.
+- [Hvað kostar vefsíða á Íslandi? Verð og kostnaðarliðir](https://wobo.is/blogg/hvad-kostar-vefsida/): Hvað kostar vefsíða? Við förum yfir verðbilið á íslenskum markaði, hvað ræður verðinu, kostnað sem gleymist og verð Wobo, frá 89.000 kr. án vsk.
 
 ## Hvað Wobo gerir ekki
 
