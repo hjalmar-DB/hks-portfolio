@@ -668,13 +668,14 @@ Wobo gefur ekki upp heimilisfang skrifstofu og birtir ekki símanúmer. Hægt er
 
 - [Forsíða](https://wobo.is/): vefsíðustúdíó í Reykjavík. Vefsíður fyrir fyrirtæki. Pakki með vef, CRM og umsjón frá 189.000 kr. Vefsíða ein og sér frá 89.000 kr.
 - [Vefsíðugerð](https://wobo.is/vefsidugerd/): almenn síða um umfang og verð vefsíðu, ekki bundin við Reykjavík.
-- [Vefsíðugerð í Reykjavík](https://wobo.is/vefsidugerd-reykjavik/): stúdíóið í Reykjavík, samband og verkefnið sem er komið í loftið þar.
+- [Vefsíðugerð í Reykjavík](https://wobo.is/vefsidugerd-reykjavik/): stúdíóið í Reykjavík, samband og verkefnin sem eru komin í loftið.
 - [Vefverslun](https://wobo.is/vefverslun/): vefverslun er hluti af Sérlausn, frá 259.000 kr.
 - [Bókunarkerfi](https://wobo.is/bokunarkerfi-og-crm/): tímapantanir og eyðublöð á vefnum. CRM er á sér síðu.
 - [CRM-kerfi](https://wobo.is/thjonusta/crm/): listi yfir fyrirspurnir, tilboð og viðskiptavini. HubSpot, Pipedrive, CRM Light eða sérsmíði.
 - [Veföryggi og rekstur](https://wobo.is/veforyggi/): veföryggi, fyrirtækjapóstur, vöktun og afrit sem hluti af umsjón, og öryggisyfirferð á vefjum. Verð eftir umfangi.
 - [Verð](https://wobo.is/verd/): öll verð á einum stað, án vsk.
-- [Draumabílar](https://wobo.is/verkefni/draumabilar/): eina verkefnið sem er sýnt opinberlega. Bílasíða, ekki netverslun.
+- [Draumabílar](https://wobo.is/verkefni/draumabilar/): verkefni sem er sýnt opinberlega. Bílasíða, ekki netverslun.
+- [Kjarnaverk](https://wobo.is/verkefni/kjarnaverk/): verkefni sem er sýnt opinberlega. Vefsíða byggingarverktaka.
 - [Blogg](https://wobo.is/blogg/): greinar. Straumur: https://wobo.is/blogg/feed.xml
 
 ## Verð án vsk

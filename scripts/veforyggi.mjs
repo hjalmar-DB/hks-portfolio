@@ -77,8 +77,8 @@ const write = (f, t) => {
   fs.writeFileSync(f, t);
 };
 
-function mustReplace(hay, from, to, label) {
-  if (hay.includes(to)) return hay;
+function mustReplace(hay, from, to, label, doneMarker = to) {
+  if (hay.includes(doneMarker)) return hay;
   if (!hay.includes(from)) throw new Error(`Fann ekki streng: ${label}`);
   return hay.split(from).join(to);
 }
@@ -175,16 +175,21 @@ function patchBundle(js) {
     "links:[{href:`/vefverslun/`,label:`Vefverslun`},{href:`/vefsidugerd-reykjavik/`,label:`Vefsíðugerð í Reykjavík`},{href:`/bokunarkerfi-og-crm/`,label:`Bókunarkerfi`},{href:`/verd/`,label:`Verðskrá`},{href:`/verkefni/draumabilar/`,label:`Draumabílar`}]},{path:`/vefverslun/`",
     "links:[{href:`/vefverslun/`,label:`Vefverslun`},{href:`/vefsidugerd-reykjavik/`,label:`Vefsíðugerð í Reykjavík`},{href:`/bokunarkerfi-og-crm/`,label:`Bókunarkerfi`},{href:`/veforyggi/`,label:`Veföryggi og rekstur`},{href:`/verd/`,label:`Verðskrá`},{href:`/verkefni/draumabilar/`,label:`Draumabílar`}]},{path:`/vefverslun/`",
     "vefsidugerd links",
+    "{href:`/bokunarkerfi-og-crm/`,label:`Bókunarkerfi`},{href:`/veforyggi/`,label:`Veföryggi og rekstur`},{href:`/verd/`,label:`Verðskrá`}",
   );
   return js;
 }
 
 function patchFooterHtml(html) {
+  // Only inside the footer. The same link text also appears in "Áfram" lists in the page body.
+  const start = html.indexOf('<footer class="foot">');
+  const end = html.indexOf("</footer>", start);
+  if (start === -1 || end === -1) return html;
   const from = '<li><a href="/verd/" data-discover="true">Verð</a></li>';
   const to = `<li><a href="/veforyggi/" data-discover="true">Veföryggi og rekstur</a></li>${from}`;
-  if (html.includes('href="/veforyggi/" data-discover="true">Veföryggi og rekstur</a></li>')) return html;
-  if (!html.includes(from)) return html;
-  return html.split(from).join(to);
+  const foot = html.slice(start, end);
+  if (foot.includes('href="/veforyggi/"') || !foot.includes(from)) return html;
+  return html.slice(0, start) + foot.split(from).join(to) + html.slice(end);
 }
 
 function patchPages() {
@@ -231,6 +236,7 @@ function patchPages() {
     '<li><a href="/bokunarkerfi-og-crm/" data-discover="true">Bókunarkerfi</a></li><li><a href="/verd/" data-discover="true">Verðskrá</a></li><li><a href="/verkefni/draumabilar/" data-discover="true">Draumabílar</a></li></ul></nav>',
     '<li><a href="/bokunarkerfi-og-crm/" data-discover="true">Bókunarkerfi</a></li><li><a href="/veforyggi/" data-discover="true">Veföryggi og rekstur</a></li><li><a href="/verd/" data-discover="true">Verðskrá</a></li><li><a href="/verkefni/draumabilar/" data-discover="true">Draumabílar</a></li></ul></nav>',
     "vefsidugerd html related",
+    '<li><a href="/veforyggi/" data-discover="true">Veföryggi og rekstur</a></li><li><a href="/verd/" data-discover="true">Verðskrá</a></li>',
   );
   write(vef, w);
 }
