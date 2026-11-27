@@ -1,0 +1,9 @@
+{
+  "name": "wobo",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/veforyggi.mjs && node scripts/build.mjs",
+    "verify": "node scripts/verify.mjs"
+  }
+}
