@@ -20,7 +20,7 @@ Wobo gefur ekki upp heimilisfang skrifstofu og birtir ekki símanúmer. Hægt er
 - [CRM-kerfi](https://wobo.is/thjonusta/crm/): listi yfir fyrirspurnir, tilboð og viðskiptavini. HubSpot, Pipedrive, CRM Light eða sérsmíði.
 - [Veföryggi og rekstur](https://wobo.is/veforyggi/): veföryggi, fyrirtækjapóstur, vöktun og afrit sem hluti af umsjón, og öryggisyfirferð á vefjum. Verð eftir umfangi.
 - [Verð](https://wobo.is/verd/): öll verð á einum stað, án vsk.
-- [Draumabílar](https://wobo.is/verkefni/draumabilar/): verkefni sem er sýnt opinberlega. Bílasíða, ekki netverslun.
+- [Draumabílar](https://wobo.is/verkefni/draumabilar/): verkefni sem er sýnt opinberlega. Bílasala og innflutningur, ekki netverslun.
 - [Kjarnaverk](https://wobo.is/verkefni/kjarnaverk/): verkefni sem er sýnt opinberlega. Vefsíða byggingarverktaka.
 - [Blogg](https://wobo.is/blogg/): greinar. Straumur: https://wobo.is/blogg/feed.xml
 
