@@ -56,6 +56,7 @@ const BLOG_CSS = `
 .blog-cta h2{margin:.1rem 0 .55rem}
 .blog-tags{display:flex;flex-wrap:wrap;gap:.4rem;margin:0 0 1rem;padding:0;list-style:none}
 .blog-tags li{border:1px solid var(--line);border-radius:999px;color:var(--muted);font-family:var(--mono);font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;padding:.28rem .6rem}
+.page-copy h1{letter-spacing:-.05em;margin:0;font-size:clamp(2.2rem,5vw,4.4rem);font-weight:400;line-height:.98}
 `.trim();
 
 function read(file) {

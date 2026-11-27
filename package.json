@@ -3,7 +3,11 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "node scripts/veforyggi.mjs && node scripts/kjarnaverk.mjs && node scripts/build.mjs",
-    "verify": "node scripts/verify.mjs"
+    "build": "node scripts/hydration.mjs strip && node scripts/veforyggi.mjs && node scripts/kjarnaverk.mjs && node scripts/forms.mjs && node scripts/build.mjs && node scripts/hydration.mjs add",
+    "verify": "node scripts/verify.mjs",
+    "publish": "node scripts/publish.mjs"
+  },
+  "devDependencies": {
+    "playwright-core": "^1.49.0"
   }
 }
