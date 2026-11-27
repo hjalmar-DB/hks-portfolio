@@ -147,15 +147,7 @@ function patchBundle(js) {
     "footer links",
   );
 
-  // 3. Home: third teaser next to Verð and CRM.
-  js = mustReplace(
-    js,
-    "(0,A.jsx)(`span`,{className:`text-link`,children:`Sjá CRM`})]})]})]})",
-    "(0,A.jsx)(`span`,{className:`text-link`,children:`Sjá CRM`})]}),(0,A.jsxs)(`a`,{className:`teaser`,href:`/veforyggi/`,children:[(0,A.jsx)(`p`,{className:`meta`,children:`Veföryggi`}),(0,A.jsx)(`h3`,{children:`Læstur vefur, póstur og afrit`}),(0,A.jsx)(`p`,{children:`Hluti af umsjón. Verð eftir umfangi.`}),(0,A.jsx)(`span`,{className:`text-link`,children:`Sjá veföryggi`})]})]})]})",
-    "home teaser",
-  );
-
-  // 4. Home: the Umsjón step.
+  // 3. Home: the Umsjón step.
   js = mustReplace(
     js,
     "Eftir það: hýsing, uppfærslur og smáar breytingar, ef þið viljið.",
@@ -163,7 +155,7 @@ function patchBundle(js) {
     "home process step",
   );
 
-  // 5. /verd/: spell out what umsjón includes, with a link.
+  // 4. /verd/: spell out what umsjón includes, with a link.
   js = mustReplace(
     js,
     "children:Lr.map(e=>(0,A.jsx)(Gr,{item:e,monthly:!0},e.id))})]})",
@@ -171,7 +163,7 @@ function patchBundle(js) {
     "verd care section",
   );
 
-  // 6. /vefsidugerd/: the monthly fee sentence and a link to the new page.
+  // 5. /vefsidugerd/: the monthly fee sentence and a link to the new page.
   js = mustReplace(
     js,
     "Mánaðargjaldið er fyrir hýsingu, uppfærslur og smáar breytingar. Það er ekki ný síða í hverjum mánuði.",
@@ -206,12 +198,6 @@ function patchPages() {
   // Home.
   const home = path.join(root, "index.html");
   let h = read(home);
-  h = mustReplace(
-    h,
-    '<span class="text-link">Sjá CRM</span></a></div></section>',
-    '<span class="text-link">Sjá CRM</span></a><a class="teaser" href="/veforyggi/"><p class="meta">Veföryggi</p><h3>Læstur vefur, póstur og afrit</h3><p>Hluti af umsjón. Verð eftir umfangi.</p><span class="text-link">Sjá veföryggi</span></a></div></section>',
-    "home teaser html",
-  );
   h = mustReplace(
     h,
     "Eftir það: hýsing, uppfærslur og smáar breytingar, ef þið viljið.",
