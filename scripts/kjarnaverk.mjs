@@ -75,8 +75,10 @@ const write = (f, t) => {
   fs.mkdirSync(path.dirname(f), { recursive: true });
   fs.writeFileSync(f, t);
 };
-function mustReplace(hay, from, to, label) {
+function mustReplace(hay, from, to, label, done) {
   if (hay.includes(to)) return hay;
+  const markers = done == null ? [] : Array.isArray(done) ? done : [done];
+  if (markers.some((s) => hay.includes(s))) return hay;
   if (!hay.includes(from)) throw new Error(`Fann ekki streng: ${label}`);
   return hay.split(from).join(to);
 }
@@ -140,9 +142,9 @@ function patchBundle(js) {
 
   // Copy that said Draumabílar was the only project.
   js = mustReplace(js, `id:\`daemi\`,title:\`${COPY.vefDaemiTitleFrom}\``, `id:\`daemi\`,title:\`${COPY.vefDaemiTitleTo}\``, "vefsidugerd title");
-  js = mustReplace(js, COPY.vefDaemiFrom, COPY.vefDaemiTo, "vefsidugerd paragraph");
+  js = mustReplace(js, COPY.vefDaemiFrom, COPY.vefDaemiTo, "vefsidugerd paragraph", "með leit, innflutningi og fjármögnunarreikni");
   js = mustReplace(js, `id:\`verk\`,title:\`${COPY.rvkTitleFrom}\``, `id:\`verk\`,title:\`${COPY.rvkTitleTo}\``, "reykjavik title");
-  js = mustReplace(js, COPY.rvkFrom, COPY.rvkTo, "reykjavik paragraph");
+  js = mustReplace(js, COPY.rvkFrom, COPY.rvkTo, "reykjavik paragraph", "leit að bílum, innflutningur og reiknir fyrir afborgun");
 
   // Related links on those two pages.
   js = mustReplace(
@@ -195,14 +197,14 @@ function patchPages() {
   const vef = path.join(root, "vefsidugerd", "index.html");
   let v = read(vef);
   v = mustReplace(v, `<h2 id="daemi">${COPY.vefDaemiTitleFrom}</h2>`, `<h2 id="daemi">${COPY.vefDaemiTitleTo}</h2>`, "vef html title");
-  v = mustReplace(v, COPY.vefDaemiFrom, COPY.vefDaemiTo, "vef html text");
+  v = mustReplace(v, COPY.vefDaemiFrom, COPY.vefDaemiTo, "vef html text", "með leit, innflutningi og fjármögnunarreikni");
   v = mustReplace(v, relatedFrom, relatedTo, "vef html related");
   write(vef, v);
 
   const rvk = path.join(root, "vefsidugerd-reykjavik", "index.html");
   let r = read(rvk);
   r = mustReplace(r, `<h2 id="verk">${COPY.rvkTitleFrom}</h2>`, `<h2 id="verk">${COPY.rvkTitleTo}</h2>`, "rvk html title");
-  r = mustReplace(r, COPY.rvkFrom, COPY.rvkTo, "rvk html text");
+  r = mustReplace(r, COPY.rvkFrom, COPY.rvkTo, "rvk html text", "leit að bílum, innflutningur og reiknir fyrir afborgun");
   r = mustReplace(r, relatedFrom, relatedTo, "rvk html related");
   write(rvk, r);
 }
